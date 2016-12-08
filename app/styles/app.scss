@@ -1,79 +1,122 @@
+//
+// VENDORS
+//
+
+// Normalize.css
+// A modern, HTML5-ready alternative to CSS resets
+// https://necolas.github.io/normalize.css/
 @import "normalize";
+
+// Bourbon
+// A simple and lightweight mixin library for Sass
+// http://bourbon.io/
 @import "bourbon";
+
+// Neat
+// Neat is a semantic grid framework built with Sass
+// http://neat.bourbon.io/
 @import "neat";
 
-@import "fonts";
-@import "colors";
-@import "retina";
+//
+// HELPERS
+//
+@import "base/animations";
+@import "base/colors";
+@import "base/fonts";
+@import "base/mixins";
 
-@import "misc";
+@import "base/base";
+@import "base/helpers";
 
-@import "animations";
+//
+//
+//
 @import "icons";
+@import "retina";
+@import "misc";
+@import "alerts";
 @import "buttons";
+@import "code";
 @import "images";
 @import "inputs";
-@import "forms";
-@import "alerts";
-
-@import "main";
-@import "shame";
-
-@import "settings";
 @import "pace";
-@import "code";
 
-@import "dropdown-menu";
+//
+// LAYOUT
+//
+@import "layout/content";
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/header";
 
-@import "index";
-@import "task";
-@import "task-new";
-@import "start";
-
+//
+// COMPONENTS
+//
 @import "components/animated-high-five";
 @import "components/categories-list";
 @import "components/category-item";
 @import "components/code-theme-selector";
 @import "components/comment-item";
 @import "components/create-comment-form";
-@import "components/donation/card-item";
-@import "components/donations/donation-progress";
-@import "components/donations/donation-status";
-@import "components/donation-goal";
-@import "components/donation-goal-edit";
-@import "components/donation-payment";
 @import "components/drag-zone";
+@import "components/dropdown-menu";
 @import "components/editor-with-preview";
 @import "components/error-wrapper";
 @import "components/image-drop";
 @import "components/login-form";
 @import "components/member-list-item";
+@import "components/pager-control";
+@import "components/progress-bar";
+@import "components/role-item";
+@import "components/settings-menu";
+@import "components/signup-form";
+@import "components/stripe-connect-button";
+
+//
+// COMPONENTS - DONATIONS
+//
+@import "components/donation-goal-edit";
+@import "components/donation-goal";
+@import "components/donation-payment";
+@import "components/donation/card-item";
+@import "components/donations/donation-progress";
+@import "components/donations/donation-status";
+
+//
+// COMPONENTS - ORGANIZATION
+//
 @import "components/organization-header";
 @import "components/organization-members";
-@import "components/pager-control";
-@import "components/stripe-connect-button";
-@import "components/task-comment-list";
-@import "components/task-details";
-@import "components/task-header";
-@import "components/task-item";
-@import "components/task-status";
-@import "components/task-new-form";
-@import "components/task-title";
-@import "components/task-status-button";
-@import "components/progress-bar";
-@import "components/project-details";
-@import "components/project-card";
-@import "components/project-card-skills";
+
+//
+// COMPONENTS - PROJECTS
+//
 @import "components/project-card-members";
+@import "components/project-card-skills";
+@import "components/project-card";
+@import "components/project-details";
 @import "components/project-header";
 @import "components/project-item";
 @import "components/project-list";
 @import "components/project-long-description";
 @import "components/project-menu";
 @import "components/project-task-list";
-@import "components/role-item";
-@import "components/settings-menu";
-@import "components/signup-form";
+
+//
+// COMPONENTS - TASKS
+//
+@import "components/task-comment-list";
+@import "components/task-details";
+@import "components/task-header";
+@import "components/task-item";
+@import "components/task-new-form";
+@import "components/task-status-button";
+@import "components/task-status";
+@import "components/task-title";
+
+//
+// COMPONENTS - USER
+//
 @import "components/user-details";
 @import "components/user-menu";
 @import "components/user-organizations-list";
@@ -81,30 +124,32 @@
 @import "components/user-skills-input";
 
 //
-// HELPERS
-//
-@import "base/helpers.scss";
-
-//
-// LAYOUT
-//
-@import "layout/content";
-@import "layout/footer";
-@import "layout/header";
-
-//
-// COMPONENTS
-//
-
-//
 // TEMPLATES
 //
+@import "index"; // index is the stylesheet for the homepage
+@import "start";
 @import "templates/about";
 @import "templates/oauth-stripe";
+@import "templates/team";
+
+//
+// TEMPLATES - PROJECTS
+//
+@import "templates/project/settings/settings";
+@import "templates/project/settings/contributors";
+@import "templates/project/tasks/task";
+@import "templates/project/tasks/task-new";
 @import "templates/project/index";
 @import "templates/project/thank-you";
-@import "templates/project/settings/contributors";
+
+//
+// TEMPLATES - ONBOARDING
+//
 @import "templates/start/expertise";
 @import "templates/start/hello";
 @import "templates/start/skills";
-@import "templates/team";
+
+//
+// SHAME.CSS
+//
+@import "shame";

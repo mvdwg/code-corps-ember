@@ -48,6 +48,15 @@
 
 // no templates are using the classes below
 
+.html {
+  &.danger {
+    background: $danger-color;
+  }
+  &.warning {
+    background: $warning-color;
+  }
+}
+
 .menu {
   padding: 10px 0;
   ul {

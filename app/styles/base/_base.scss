@@ -26,25 +26,10 @@ html {
   font-family: $body-font-family;
   font-size: $body-font-size-normal;
   height: 100%;
-
-  &.danger {
-    background: $danger-color;
-  }
-  &.warning {
-    background: $warning-color;
-  }
-}
-
-p {
-  font-size: $body-font-size-normal;
 }
 
 ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  list-style-type: none;
-}
-
-.error {
-  color: $red;
 }

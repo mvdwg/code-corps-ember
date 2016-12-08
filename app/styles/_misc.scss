@@ -1,25 +1,25 @@
 @mixin arrow-down {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
+  border-bottom: none;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
   border-top: 6px solid $text--dark;
-  border-bottom: none;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0;
 }
 
 @mixin arrow-up {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  vertical-align: middle;
+  border-bottom: 6px solid $text--dark;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-bottom: 6px solid $text--dark;
   border-top: none;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0;
 }
 
 .css-truncate-target {
@@ -27,6 +27,6 @@
   max-width: 125px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
   vertical-align: top;
+  white-space: nowrap;
 }

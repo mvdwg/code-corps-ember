@@ -82,3 +82,14 @@
 .subtext {
   font-size: $body-font-size-small;
 }
+
+// this seems to have been inherited from http://primercss.io/utilities/#truncation
+// originally used in the "Signed in as [username]" dropdown message
+.css-truncate-target {
+  display: inline-block;
+  max-width: 125px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+}

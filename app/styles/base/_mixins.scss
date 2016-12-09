@@ -7,3 +7,24 @@
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
+
+@mixin arrow-base($border-color: #333 transparent, $border-width: 6px 4px) {
+  border-color: $border-color;
+  border-style: solid;
+  border-width: $border-width;
+  content: "";
+  display: inline-block;
+  height: 0;
+  vertical-align: middle;
+  width: 0;
+}
+
+@mixin arrow-down {
+  @include arrow-base;
+  border-bottom: none;
+}
+
+@mixin arrow-up {
+  @include arrow-base;
+  border-top: none;
+}

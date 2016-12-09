@@ -10,8 +10,8 @@ test('it renders elements for the default menu when logged out', function(assert
 
   this.render(hbs`{{navigation-menu}}`);
   assert.equal(this.$('.header__logo').length, 1);
-  assert.equal(this.$('.header__navigation--main').length, 1);
-  assert.equal(this.$('.header__navigation--auth').length, 1);
+  assert.equal(this.$('.header-navigation--main').length, 1);
+  assert.equal(this.$('.header-navigation--auth').length, 1);
   assert.equal(this.$('.user-menu-tab').length, 0);
   assert.equal(this.$('.onboarding__steps').length, 0);
 });
@@ -22,8 +22,8 @@ test('it renders elements for the default menu when logged in', function(assert)
 
   this.render(hbs`{{navigation-menu}}`);
   assert.equal(this.$('.header__logo').length, 1);
-  assert.equal(this.$('.header__navigation--main').length, 1);
-  assert.equal(this.$('.header__navigation--auth').length, 0);
+  assert.equal(this.$('.header-navigation--main').length, 1);
+  assert.equal(this.$('.header-navigation--auth').length, 0);
   assert.equal(this.$('.user-menu-tab').length, 1);
   assert.equal(this.$('.onboarding__steps').length, 0);
 });
@@ -39,8 +39,8 @@ test('it renders elements for the onboarding menu', function(assert) {
 
   this.render(hbs`{{navigation-menu}}`);
   assert.equal(this.$('.header__logo').length, 1);
-  assert.equal(this.$('.header__navigation--main').length, 0);
-  assert.equal(this.$('.header__navigation--auth').length, 0);
+  assert.equal(this.$('.header-navigation--main').length, 0);
+  assert.equal(this.$('.header-navigation--auth').length, 0);
   assert.equal(this.$('.user-menu-tab').length, 0);
   assert.equal(this.$('.onboarding__steps').length, 1);
   assert.equal(this.$('.onboarding__steps').text().trim(), 'Step 1 of 4');

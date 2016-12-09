@@ -54,19 +54,6 @@ $yellow: #F39C12;
 $yellow--light: #FFF9DE;
 
 //
-// TEXT
-//
-
-// text colors should use gray variables
-
-//$text
-$text--dark: $gray--darkest;
-// below is the most common text color in the project
-// it bothers me a bit that text--light uses gray--darker as its color
-$text--light: $gray--darker;
-$text--lighter: $gray;
-
-//
 // LINKS
 //
 $link-color: $blue;
@@ -116,7 +103,7 @@ $taskTypeColors: (
 );
 
 $taskTypeTextOnBackgroundColors: (
-  "idea": $text--dark,
+  "idea": $gray--darkest,
   "issue": white,
   "progress": white,
   "task": white,

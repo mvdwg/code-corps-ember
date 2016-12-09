@@ -1,7 +1,7 @@
 .start__hello {
   $file: "/assets/images/people-signup";
   @include background-image-retina($file, "png", 410px, 396px);
-  background-position: 100% 0;
+  background-position: right center;
   display: flex;
   flex: 1;
   flex-flow: row wrap;

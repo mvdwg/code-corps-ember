@@ -5,6 +5,7 @@
   box-shadow: 0px 10px 41px -16px rgba(0,0,0,0.75);
   float: left;
   margin-top: 5px;
+  min-width: 15em;
   padding: 5px 0;
   position: absolute;
   text-align: left;
@@ -62,13 +63,26 @@
 
 .dropdown__footer {
   @include border-bottom-radius(4px);
+  font-size: $body-font-size-small;
   margin: 5px 0 -5px 0;
 }
 
 .dropdown__body {
   padding: 10px 15px;
+}
+
+.dropdown__options {
   li {
     display: block;
+    float: none;
     padding: 3px 0;
+  }
+  a {
+    // having problems with "navigation__options a"
+    // overwriting the properties below
+    border: 0;
+    color: #08A8FC;
+    font-weight: normal;
+    padding: 0;
   }
 }

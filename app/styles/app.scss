@@ -33,7 +33,6 @@
 //
 @import "icons";
 @import "retina";
-@import "misc";
 @import "alerts";
 @import "buttons";
 @import "code";
@@ -59,7 +58,6 @@
 @import "components/comment-item";
 @import "components/create-comment-form";
 @import "components/drag-zone";
-@import "components/dropdown-menu";
 @import "components/editor-with-preview";
 @import "components/error-wrapper";
 @import "components/image-drop";
@@ -118,7 +116,11 @@
 // COMPONENTS - USER
 //
 @import "components/user-details";
+
+// dropdown-menu has to come after user-menu for styles to work correctly
 @import "components/user-menu";
+@import "components/dropdown-menu";
+
 @import "components/user-organizations-list";
 @import "components/user-sidebar";
 @import "components/user-skills-input";

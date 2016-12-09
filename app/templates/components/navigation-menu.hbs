@@ -3,23 +3,21 @@
 </h1>
 
 {{#if navigationMenu.isDefault}}
-<nav class="header__navigation--main">
-  <ul>
+<nav class="header-navigation--main">
+  <ul class="header-navigation__options">
     <li>{{#link-to 'projects-list'}}Projects{{/link-to}}</li>
     <li><a href="https://blog.codecorps.org">Blog</a></li>
   </ul>
 </nav>
 
 {{#if session.isAuthenticated}}
-<nav class="header__navigation--auth">
-  <ul>
-    <li class="user-menu-tab">{{user-menu user=currentUser.user}}</li>
-  </ul>
+<nav class="header-navigation--auth">
+  {{user-menu user=currentUser.user class="header-navigation__options" }}
 </nav>
 
 {{else}}
-<nav class="header__navigation--auth">
-  <ul>
+<nav class="header-navigation--auth">
+  <ul class="header-navigation__options">
     <li>{{#link-to 'signup' class="signup"}}Sign up{{/link-to}}</li>
     <li>{{#link-to 'login' class="login"}}Sign in{{/link-to}}</li>
   </ul>
@@ -29,7 +27,7 @@
 {{/if}}
 
 {{#if navigationMenu.isOnboarding}}
-<div class="header__navigation--onboarding">
+<div class="header-navigation--onboarding">
   <div class="onboarding__progress">
     {{progress-bar-container percentage=onboarding.progressPercentage}}
   </div>

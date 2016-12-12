@@ -2,10 +2,18 @@ import Ember from 'ember';
 
 const {
   Component,
-  String: { htmlSafe },
+  String: {
+    htmlSafe
+  },
   computed,
-  computed: { alias, notEmpty, or },
-  inject: { service },
+  computed: {
+    alias,
+    notEmpty,
+    or
+  },
+  inject: {
+    service
+  },
   on,
   run
 } = Ember;
@@ -15,13 +23,13 @@ export default Component.extend({
   attributeBindings: ['style'],
   classNames: ['image-drop'],
   classNameBindings: [
-    'active',
-    'circle:is-circular',
-    'isDraggingOnApp:is-dragging',
+    'image-drop--active',
+    'circle:image-drop--circle',
+    'isDraggingOnApp:image-drop--drag',
     'hasImage'
   ],
   droppedImage: null,
-  helpText: 'Drop your image here.',
+  helpText: 'Click to add your photo.',
   originalImage: null,
 
   appDragState: service('dragState'),

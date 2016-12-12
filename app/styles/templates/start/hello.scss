@@ -12,6 +12,10 @@
 .hello__column {
   width: 30%;
   &:first-of-type {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding-bottom: 2em;
     width: 100%;
   }
   &:last-of-type {

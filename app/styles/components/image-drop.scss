@@ -1,135 +1,74 @@
-@mixin outside-border($width, $style, $color, $radius: 5px) {
-  $border-radius: $radius + ($width * 2);
+.image-drop {
+  align-items: center;
+  background-size: cover;
+  border: 2px solid $blue;
+  color: $gray;
+  display: flex;
+  font-size: $body-font-size-small;
+  height: 150px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  width: 150px;
+ }
 
-  &:before {
-    border-color: $color;
-    border-radius: $border-radius;
-    border-style: $style;
-    border-width: $width;
-    content: "";
-    position: absolute;
-    top: -$width;
-    left: -$width;
-    right: -$width;
-    bottom: -$width;
-    z-index: -1;
-  }
+.image-drop--active {
+  @extend .image-drop;
+  background: $blue--lighter;
+  color: $blue;
+}
 
-  &.is-circular {
-    &:before {
-      border-radius: $border-radius;
+.image-drop--circle {
+  @extend .image-drop;
+  border-radius: 75px;
+  transition: background-color .25s ease-out;
+  &:hover {
+    // !important here is used to make sure hover background
+    // displays after an image was uploaded
+    background: $gray--light !important;
+    background-size: cover;
+    color: white;
+    height: 150px;
+    width: 150px;
+    span {
+      display: none;
     }
+    &:after {
+      @include sprite($camera);
+      content: '';
+    }
+  }
+}
+
+.image-drop--drag {
+  @extend .image-drop;
+  background: $gray--light !important;
+  border: 2px dashed $blue;
+  span {
+    display: none;
+  }
+  &:after {
+    @include sprite($camera);
+    content: '';
   }
 }
 
 .image-drop {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background: transparent;
-  border-radius: 75px;
-  height: 150px;
-  position: relative;
-  width: 150px;
-
-  &.is-circular {
-    border: 2px solid $blue;
-
-    input[type=file] {
-      border-radius: 75px;
-    }
-  }
-
-  &.is-dragging {
-    @include outside-border(2px, dashed, $gray, 75px);
-    background: transparent !important;
-
-    p {
-      display: block;
-    }
-  }
-
-  &.active {
-    background: $blue--lighter !important;
-
-    &:before {
-      border-color: $blue;
-    }
-
-    p {
-      color: $blue;
-    }
-  }
-
-  .hover {
-    background: rgba(0, 0, 0, 0.6);
-    bottom: 0;
-    color: white;
-    display: none;
+  input[type=file] {
+    cursor: pointer;
+    height: 100%;
     left: 0;
-    padding: 5px;
+    opacity: 0;
     position: absolute;
-    right: 0;
     top: 0;
-    z-index: 2;
-
-    &:before {
-      @include sprite($camera);
-      content: "";
-      display: block;
-      margin: 15px auto 5px;
-    }
-
-    p {
-      color: white;
-      display: block;
-      margin: 5px 0;
-      padding: 0 10px;
-      width: 100%;
-    }
-  }
-
-  &:hover:not(.is-dragging) {
-    @include outside-border(2px, solid, $blue);
-
-    &.is-circular {
-      @include outside-border(2px, solid, $blue, 75px);
-    }
-
-    .hover {
-      display: block;
-    }
+    width: 100%;
+    z-index: 100;
   }
 }
 
-.image-drop p {
-  color: #a9a9a9;
-  display: none;
-  text-align: center;
-  width: 80%;
-}
-
-.image-drop p.help-text {
-  line-height: 22px;
-  margin: 0 auto;
-}
-
-.image-drop .text {
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
-.image-drop input[type=file] {
-  cursor: pointer;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 3;
+.has-image {
+  // this will hide the original caption displayed before an image is uploaded
+  span {
+    display: none;
+  }
 }

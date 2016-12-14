@@ -1,3 +1,13 @@
+// pace (automatic page loader progress bar)
+// http://github.hubspot.com/pace/
+.pace-progress {
+  background: $blue;
+}
+
+.drag-zone {
+  height: 100%;
+}
+
 .site-header {
   display: flex;
   height: 5em;

@@ -1,5 +1,9 @@
-.start__interests {
+.categories-list {
   flex: 1;
   margin-bottom: 2em;
   width: 100%;
+}
+
+.start__interests {
+  @extend .categories-list;
 }

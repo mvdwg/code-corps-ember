@@ -32,13 +32,11 @@
 //
 //
 @import "icons";
-@import "retina";
 @import "alerts";
 @import "buttons";
 @import "code";
 @import "images";
 @import "inputs";
-@import "pace";
 
 //
 // LAYOUT
@@ -57,7 +55,6 @@
 @import "components/code-theme-selector";
 @import "components/comment-item";
 @import "components/create-comment-form";
-@import "components/drag-zone";
 @import "components/editor-with-preview";
 @import "components/error-wrapper";
 @import "components/image-drop";
@@ -65,7 +62,6 @@
 @import "components/member-list-item";
 @import "components/pager-control";
 @import "components/progress-bar";
-@import "components/role-item";
 @import "components/settings-menu";
 @import "components/signup-form";
 @import "components/stripe-connect-button";
@@ -117,8 +113,8 @@
 //
 @import "components/user-details";
 
-// dropdown-menu has to come after user-menu for styles to work correctly
 @import "components/user-menu";
+// dropdown-menu has to come after user-menu for styles to work correctly
 @import "components/dropdown-menu";
 
 @import "components/user-organizations-list";
@@ -128,8 +124,7 @@
 //
 // TEMPLATES
 //
-@import "index"; // index is the stylesheet for the homepage
-@import "start";
+@import "templates/index"; // index is the stylesheet for the homepage
 @import "templates/about";
 @import "templates/oauth-stripe";
 @import "templates/team";
@@ -147,6 +142,7 @@
 //
 // TEMPLATES - ONBOARDING
 //
+@import "templates/start/start";
 @import "templates/start/expertise";
 @import "templates/start/hello";
 @import "templates/start/skills";

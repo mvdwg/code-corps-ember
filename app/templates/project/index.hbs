@@ -1,28 +1,32 @@
 {{title project.title " by " project.organization.name}}
 
 {{project-details project=project expanded=true}}
+
 {{project-menu project=project}}
 
-<div class="project-main">
+<div class="project-wrapper">
+
   {{project-long-description project=project}}
-</div>
 
-<div class="project-sidebar">
-  {{#if project.donationsActive}}
-    <div class="project-sidebar__section">
-      <h3>Donations</h3>
-      {{donations/donation-progress
-        amountDonated=project.totalMonthlyDonated
-        donationGoal=project.currentDonationGoal
-      }}
-      {{donations/donation-status
-        createDonation=(action 'saveSubscription')
-        subscription=subscription
-      }}
-    </div>
-  {{/if}}
+  <aside class="project-sidebar">
 
-  <div class="project-sidebar__section">
-    {{organization-members count=project.organization.totalMembersCount members=project.organization.organizationMembers}}
-  </div>
+    {{#if project.donationsActive}}
+      <section class="project-sidebar__section">
+        <h3>Donations</h3>
+        {{donations/donation-progress
+          amountDonated=project.totalMonthlyDonated
+          donationGoal=project.currentDonationGoal
+        }}
+        {{donations/donation-status
+          createDonation=(action 'saveSubscription')
+          subscription=subscription
+        }}
+      </section>
+    {{/if}}
+
+    <section class="project-sidebar__section">
+      {{organization-members count=project.organization.totalMembersCount members=project.organization.organizationMembers}}
+    </section>
+
+  </aside>
 </div>

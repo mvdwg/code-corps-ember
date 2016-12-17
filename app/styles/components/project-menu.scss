@@ -1,59 +1,53 @@
-.horizontal-menu {
-  @include clearfix;
-
-  border-bottom: 1px solid $gray;
-  list-style-type: none;
-  margin: 0 0 10px 0;
-  padding: 0;
-  width: 100%;
-
-  li {
-    float: left;
-    font-size: $body-font-size-normal;
-  }
-
-  a {
-    border-bottom: 3px solid transparent;
-    color: $text--lighter;
-    display: block;
-    font-weight: 500;
-    margin-bottom: -1px;
-    padding: 6px 14px;
-    text-decoration: none;
-
-    &.active {
-      border-bottom-color: $blue;
-      color: $blue;
-      font-weight: 700;
-
-      span.info {
-        background: $blue;
-      }
+.project__menu, .organization-menu {
+  &--horizontal {
+    @include clearfix;
+    border-bottom: 1px solid $gray--light;
+    height: 2.5em;
+    list-style-type: none;
+    margin-bottom: .7em;
+    padding: 0;
+    width: 100%;
+    li {
+      float: left;
+      font-size: $body-font-size-normal;
+      height: 100%;
     }
-
-    &:hover {
-      border-bottom-color: $blue;
-      color: $blue;
-      transition: border-bottom-color ease 0.3s;
-
-      span.info {
-        background: $blue;
-      }
-    }
-
-    span.info {
-      background: $text--lighter;
-      border-radius: 4px;
-      color: white;
-      font-size: $body-font-size-small;
-      font-weight: 300;
-      padding: 2px 7px 3px 7px;
-      margin-left: 5px;
-      vertical-align: 1px;
-
-      strong {
+    a {
+      border-bottom: 3px solid transparent;
+      color: $text--lighter;
+      display: block;
+      font-weight: 500;
+      height: 100%;
+      padding: 6px 14px;
+      text-decoration: none;
+      &.active {
+        border-bottom-color: $blue;
+        color: $blue;
         font-weight: 700;
       }
+      &:hover {
+        border-bottom-color: $blue;
+        color: $blue;
+        transition: border-bottom-color ease 0.3s;
+      }
     }
   }
+}
+
+// would like to rename this class to something
+// more descriptive like .project-menu__badge
+.info {
+  align-items: center;
+  background: $blue--light;
+  border-radius: 2em;
+  color: white;
+  display: inline-flex;
+  font-size: $body-font-size-small;
+  font-weight: 300;
+  justify-content: center;
+  left: calc(100% - 2em);
+  position: relative;
+  height: 2em;
+  top: -3.5em;
+  width: 2em;
 }

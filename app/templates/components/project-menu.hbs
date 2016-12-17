@@ -1,15 +1,38 @@
-<li>{{link-to 'About' 'project.index' project}}</li>
-<li>{{#link-to 'project.tasks' project}}Tasks {{#if project.hasOpenTasks}}<span class="info">{{project.openTasksCount}}</span>{{/if}}{{/link-to}}</li>
-{{#if session.isAuthenticated}}
-  {{#if (can "manage organization" project.organization)}}
-    <li class="contributors">
-      {{#link-to 'project.settings.contributors' project}}Contributors {{#if project.hasPendingMembers}}<span class="info"><strong>{{project.pendingMembersCount}}</strong> pending</span>{{/if}}{{/link-to}}
-    </li>
-    <li>
-      {{link-to 'Donations' 'project.settings.donations' project}}
-    </li>
-    <li>
-      {{link-to 'Settings' 'project.settings.profile' project}}
-    </li>
+<ul>
+
+  <li>
+    {{link-to 'About' 'project.index' project}}
+  </li>
+
+  <li>
+    {{#link-to 'project.tasks' project}}
+      Tasks
+    {{/link-to}}
+    {{#if project.hasOpenTasks}}
+      <span class="info">{{project.openTasksCount}}</span>
+    {{/if}}
+  </li>
+
+  {{#if session.isAuthenticated}}
+    {{#if (can "manage organization" project.organization)}}
+
+      <li class="contributors">
+        {{#link-to 'project.settings.contributors' project}}
+          Contributors
+        {{/link-to}}
+        {{#if project.hasPendingMembers}}
+          <span class="info">{{project.pendingMembersCount}}</span>
+        {{/if}}
+      </li>
+
+      <li>
+        {{link-to 'Donations' 'project.settings.donations' project}}
+      </li>
+
+      <li>
+        {{link-to 'Settings' 'project.settings.profile' project}}
+      </li>
+
+    {{/if}}
   {{/if}}
-{{/if}}
+</ul>

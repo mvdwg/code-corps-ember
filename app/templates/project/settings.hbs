@@ -1,8 +1,15 @@
+{{! this template should be renamed project-settings for consistency }}
+
 {{title "Settings" " « " model.title " by " model.organization.name}}
 
 {{project-details project=model}}
+
 {{project-menu project=model}}
-{{project-settings-menu project=model}}
-<div class="settings">
+
+<div class="project-wrapper">
+  <!--
+  {{! removing settings-menu as it repeats the horizontal-menu items }}
+  {{project-settings-menu project=model}}
+  -->
   {{outlet}}
 </div>

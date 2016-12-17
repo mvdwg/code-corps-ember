@@ -1,3 +1,10 @@
+// is this a generic component? it seems to be used for projects
+// so project-settings__menu would be a better class name
+
+.project-wrapper {
+  width: 100%;
+}
+
 .settings-menu {
   li {
     a {

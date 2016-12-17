@@ -93,3 +93,10 @@
   vertical-align: top;
   white-space: nowrap;
 }
+
+// this is not good, I'd like .slugged-route-model-details to be added to
+// site-container and not its own div element and add the property below to
+// .user-details instead
+.slugged-route-model-details {
+  width: 100%;
+}

@@ -13,6 +13,7 @@ isn't this here mainly for updating a user's image? }}
     </div>
     {{else}}
     {{! is codeTheme.className needed this early in the DOM tree? }}
+    {{! add flex-direction: column to site-content when looking at tasks }}
     <div class="site-content container {{codeTheme.className}}">
       {{outlet}}
     </div>

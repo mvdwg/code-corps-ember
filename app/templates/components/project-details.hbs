@@ -1,27 +1,25 @@
-<div class="basic-details">
-  <div class="icon-container">
-    {{#link-to 'project.index' project}}<img class="icon" src={{project.iconThumbUrl}} />{{/link-to}}
-  </div>
-  <div class="details-container">
-    <h2 class="title">{{#link-to 'project.index' project}}{{project.title}}{{/link-to}}</h2>
-    {{#if expanded}}
-      <p class="description">{{project.description}}</p>
+<section class="project-details__main">
+  {{#link-to 'project.index' project}}
+    <img class="icon" src={{project.iconThumbUrl}} />
+  {{/link-to}}
+  <h2 class="title">{{#link-to 'project.index' project}}{{project.title}}{{/link-to}}</h2>
+  {{#if expanded}}
+  <p class="description">{{project.description}}</p>
+  {{/if}}
+</section>
+
+<aside class="project-details__side">
+  {{#if session.isAuthenticated}}
+    {{#if (can "join organization" project.organization)}}
+      <button class="default small" {{action 'joinProject'}}>Join project</button>
     {{/if}}
-  </div>
-</div>
-<div class="more-details">
-  <div class="right">
-    <p class="join-project">
-    {{#if session.isAuthenticated}}
-      {{#if (can "join organization" project.organization)}}
-        <button class="default small" {{action 'joinProject'}}>Join project</button>
-      {{/if}}
-      {{#if credentials.userMembershipIsPending}}
-        <button class="clear small" disabled>Membership pending</button>
-      {{/if}}
-    {{else}}
-      {{link-to "Sign up" "signup" class="button default small"}} to join this project.
+    {{#if credentials.userMembershipIsPending}}
+      <button class="clear small" disabled>Membership pending</button>
     {{/if}}
-    </p>
-  </div>
-</div>
+  {{else}}
+    {{! replaced Sign Up button with message as the button was
+    too close to main navigation Sign Up option }}
+    <p>Click on <span>Sign Up</span> above to join this project.</p>
+    <!-- {{link-to "Sign up" "signup" class="button default small"}} to join this project. -->
+  {{/if}}
+</aside>

@@ -1,59 +1,54 @@
 .member-list-item {
-  @include span-columns(12);
-
+  @include outer-container;
+  align-items: center;
   border-top: 1px solid $gray--lightest;
-  padding: 10px 0;
+  display: flex;
+  padding: .7em 1em;
   position: relative;
-
+  &:hover {
+    background-color: #F9F9F9;
+  }
   &:last-child {
     border-bottom: 1px solid $gray--lightest;
   }
+}
 
-  .actions {
-    position: absolute;
-    right: 0;
-    top: 10px;
+.project-member {
+  &__actions {
+    @include span-columns(3);
+    text-align: right;
   }
-
-  .avatar {
-    float: left;
-    margin-left: -60px;
+  &__avatar {
+    @include span-columns(1);
   }
-
-  .content {
-    margin-left: 60px;
-    margin-right: 150px;
-    position: relative;
+  &__name {
+    @include span-columns(2);
   }
-
-  p {
-    margin: 3px 0;
-
-    &.name {
-      font-weight: 700;
-    }
-
-    &.interests, &.skills {
-      color: $text--lighter;
-      font-size: $body-font-size-small;
-      margin: 5px 0;
-    }
-  }
-
-  li {
-    display: inline-block;
-
-    &:after {
-      content: ", ";
-    }
-
-    &:last-child {
-      &:not(:first-child):before {
-        content: "and ";
-      }
+  &__interests, &__skills {
+    color: $text--lighter;
+    font-size: $body-font-size-small;
+    margin-right: 2em;
+    li {
+      display: inline-block;
       &:after {
-        content: ".";
+        content: ", ";
+      }
+      &:last-child {
+        // confused by the selector below
+        &:not(:first-child):before {
+          content: "and ";
+        }
+        &:after {
+          content: ".";
+        }
       }
     }
+  }
+}
+
+.member-list-item {
+  h4 {
+    color: $gray--darkest;
+    margin: 0;
   }
 }

@@ -76,6 +76,7 @@ const routes = [
 ];
 
 export default function() {
+  this.passthrough('telling-stories.json');
   this.passthrough('https://api.stripe.com/**');
   this.passthrough('https://uploads.stripe.com/**');
 

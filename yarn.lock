@@ -1264,7 +1264,7 @@ broccoli-config-replace@^1.1.2:
     debug "^2.2.0"
     fs-extra "^0.24.0"
 
-broccoli-file-creator@^1.0.0, broccoli-file-creator@^1.0.1:
+broccoli-file-creator@^1.0.0, broccoli-file-creator@^1.0.1, broccoli-file-creator@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/broccoli-file-creator/-/broccoli-file-creator-1.1.1.tgz#1b35b67d215abdfadd8d49eeb69493c39e6c3450"
   dependencies:
@@ -2926,6 +2926,19 @@ ember-dragula@1.9.3:
   dependencies:
     ember-cli-babel "^5.1.5"
     rsvp "^3.2.1"
+
+ember-engines@^0.3.0:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/ember-engines/-/ember-engines-0.3.4.tgz#f71aef94ce3fb6fa909df6f0e40e0b1f67d48517"
+  dependencies:
+    broccoli-file-creator "^1.1.0"
+    broccoli-funnel "^1.0.0"
+    broccoli-merge-trees "^1.0.0"
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.0.3"
+    ember-cli-string-utils "^1.0.0"
+    exists-sync "0.0.3"
+    lodash "^4.12.0"
 
 ember-exam@0.6.0:
   version "0.6.0"
@@ -5077,7 +5090,7 @@ lodash@^3.10.0, lodash@^3.10.1, lodash@^3.9.3:
   version "3.10.1"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
-lodash@^4.0.0, lodash@^4.11.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.5.1, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.11.1, lodash@^4.12.0, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.0, lodash@^4.5.1, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -7055,6 +7068,14 @@ tar@^2.0.0, tar@~2.2.1:
     block-stream "*"
     fstream "^1.0.2"
     inherits "2"
+
+telling-stories-dashboard@latest:
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/telling-stories-dashboard/-/telling-stories-dashboard-1.0.0-alpha.3.tgz#90315de8bb0bf81114e0e580486610e987b67118"
+  dependencies:
+    ember-cli-babel "^5.1.6"
+    ember-cli-htmlbars "^1.1.0"
+    ember-engines "^0.3.0"
 
 telling-stories@latest:
   version "1.0.0-alpha.6"

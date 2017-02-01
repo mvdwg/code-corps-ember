@@ -65,6 +65,7 @@
     "ember-deferred-content": "0.2.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-dragula": "1.9.3",
+    "ember-engines": "0.4.0",
     "ember-exam": "0.6.0",
     "ember-export-application-global": "^1.0.5",
     "ember-keyboard": "^2.1.9",
@@ -94,7 +95,8 @@
   "dependencies": {
     "node-sass": "latest",
     "bower": "latest",
-    "telling-stories": "latest"
+    "telling-stories": "latest",
+    "telling-stories-dashboard": "latest"
   },
   "engines": {
     "node": ">= 4"

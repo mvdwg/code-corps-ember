@@ -29,6 +29,7 @@ let AppRouter = Router.extend({
 });
 
 AppRouter.map(function() {
+  this.mount('telling-stories-engine', { path: 'features' });
   this.route('login');
 
   this.route('oauth-stripe', {
